@@ -16,7 +16,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/hmnsd-portfolio"
-          className="text-2xl text-white font-bold hover:text-orange-500"
+          className="text-2xl  font-bold text-white hover:text-orange-400"
         >
           HMNSD
         </Link>

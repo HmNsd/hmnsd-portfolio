@@ -13,7 +13,7 @@ export default function Experience() {
           </p>
           <hr className="my-2 border-gray-200 sm:mx-auto lg:my-2" />
 
-          <div className="ps-2">
+          <div className="ps-2 text-stone-200">
             <ul className="list-disc">
               <li className="m-1">
                 Analyse and improve the performance of web applications through
@@ -45,7 +45,7 @@ export default function Experience() {
           </p>
           <hr className="my-2 border-gray-200 sm:mx-auto lg:my-2" />
 
-          <div className="ps-2">
+          <div className="ps-2text-stone-200">
             <ul className="list-disc">
               <li className="m-1">
                 Implemented efficient optimization techniques to enhance page
@@ -73,7 +73,7 @@ export default function Experience() {
             Sep_2021 - Mar_2022 | Full Stack Development
           </p>
           <hr className="my-2 border-gray-200 sm:mx-auto lg:my-2" />
-          <div className="ps-2">
+          <div className="ps-2 text-stone-200">
             <ul className="list-disc">
               <li className="m-1">
                 Managed a team of 7 members and developed an internal HR portal
