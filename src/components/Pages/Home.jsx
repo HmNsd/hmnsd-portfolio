@@ -7,18 +7,18 @@ export default function Home() {
         id="Home"
         className="h-full flex flex-col justify-center items-center text-center px-6 py-8 sm:py-12"
       >
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className=" text-3xl md:text-5xl font-bold mb-4">
           Hi, I’m <span className="text-orange-500">Himanshu Nishad</span>
         </h1>
-        <p className="text-lg text-blue-00 font-bold">
+        <p className="text-l md:text-2xl text-blue">
           Senior Software Engineer | HCLTECH | UnderArmour
         </p>
       </section>
 
       <section id="about" className="py-5 px-6 container mx-auto">
-        <p className="text-stone-200 font-semibold leading-relaxed">Introduction</p>
-        <h2 className="text-4xl font-bold mb-4 text-orange-400">Overview,</h2>
-        <p className="text-stone-200 text-xl leading-relaxed">
+        <p className="text-stone-200 md:font-semibold leading-relaxed">Introduction</p>
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-orange-400">Overview,</h2>
+        <p className="text-stone-200 text:l md:text-xl leading-relaxed">
       
 
 
