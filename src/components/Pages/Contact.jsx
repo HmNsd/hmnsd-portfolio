@@ -175,7 +175,7 @@ export default function Contact() {
           <div className="mt-10">
             <button
               type="submit"
-              className="block w-full bg-white hover:bg-orange-500 text-black hover:text-white rounded-md px-3.5 py-2.5 text-center text-sm font-semibold  shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="block w-full bg-stone-50 hover:bg-orange-500 text-black hover:text-white rounded-md px-3.5 py-2.5 text-center text-sm font-semibold  shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
               
             >
               Let's talk
@@ -188,7 +188,7 @@ export default function Contact() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
-              <h2 className="text-4xl font-semibold tracking-tight text-white">
+              <h2 className="text-4xl font-semibold tracking-tight text-orange-400">
                 Brew n Code
               </h2>
               <p className="mt-4 text-lg text-gray-300">
@@ -206,11 +206,11 @@ export default function Contact() {
                   required
                   placeholder="Enter your email"
                   autoComplete="email"
-                  className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-orange-500 focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
+                  className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-stone-400 focus:outline-1  focus:outline-white sm:text-sm/6"
                 />
                 <button
                   type="submit"
-                  className="flex-none rounded-md bg-white hover:bg-orange-500 text-black hover:text-white px-3.5 py-2.5 text-sm font-semibold  shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="flex-none rounded-md bg-stone-200 hover:bg-orange-500 text-black hover:text-white px-3.5 py-2.5 text-sm font-semibold  shadow-xs  focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Subscribe
                 </button>

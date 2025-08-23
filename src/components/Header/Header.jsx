@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className=" mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link
-          to="/"
+          to="/hmnsd-portfolio"
           className="text-2xl text-white font-bold hover:text-orange-500"
         >
           MyPortfolio
@@ -23,10 +23,10 @@ export default function Navbar() {
 
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex space-x-6" id="mobile-menu-2">
-          <ul className="flex flex-col font-medium text-xl lg:flex-row lg:space-x-8 lg:mt-0">
+          <ul className="flex flex-col font-medium text-xl lg:flex-row xl:space-x-8 lg:space-x-3 lg:mt-0">
             <li>
               <NavLink
-                to="/skills"
+                to="/hmnsd-portfolio/skills"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-bold" : "text-white"
@@ -38,7 +38,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/projects"
+                to="/hmnsd-portfolio/projects"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-bold" : "text-white"
@@ -50,7 +50,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/experience"
+                to="/hmnsd-portfolio/experience"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-bold" : "text-white"
@@ -62,7 +62,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/hmnsd-portfolio/contact"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-bold" : "text-white"
@@ -70,6 +70,18 @@ export default function Navbar() {
                 }
               >
                 Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/hmnsd-portfolio/services"
+                className={({ isActive }) =>
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-orange-500 font-bold" : "text-white"
+                  } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
+                }
+              >
+                Services
               </NavLink>
             </li>
           </ul>
@@ -88,7 +100,7 @@ export default function Navbar() {
         {/* Buttons (Desktop) */}
         <div className="hidden lg:flex ">
           <Link
-            to="/login"
+            to="/hmnsd-portfolio/login"
             className="text-stone-900 hover:text-white bg-stone-100 hover:bg-orange-500 focus:ring-1  focus:ring-stone-100 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
           >
             Log in
@@ -136,7 +148,7 @@ export default function Navbar() {
           <ul className="flex flex-col lg:flex-row font-light lg:space-x-8 lg:mt-0">
             <li>
               <NavLink
-                to="/skills"
+                to="/hmnsd-portfolio/skills"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
@@ -148,7 +160,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/projects"
+                to="/hmnsd-portfolio/projects"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
@@ -160,7 +172,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/experience"
+                to="/hmnsd-portfolio/experience"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
@@ -172,7 +184,7 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/hmnsd-portfolio/contact"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
@@ -182,12 +194,24 @@ export default function Navbar() {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/hmnsd-portfolio/services"
+                className={({ isActive }) =>
+                  `block py-2 pr-4 pl-3 duration-200 ${
+                    isActive ? "text-orange-500 font-extrabold" : "text-white"
+                  } border-b rounded-xl  border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
+                }
+              >
+                Services
+              </NavLink>
+            </li>
           </ul>
        
 
           <div className="flex space-x-4 mt-4">
             <Link
-              to="/login"
+              to="/hmnsd-portfolio/login"
               className="flex-1 px-4 py-2 text-stone-900 hover:text-white bg-stone-100 hover:bg-orange-500 focus:ring-1  focus:ring-stone-100 font-medium rounded-lg text-sm text-center focus:outline-none"
             >
               Log in

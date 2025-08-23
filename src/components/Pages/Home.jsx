@@ -15,31 +15,23 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="about" className="py-10 px-6 container mx-auto">
-        <p className="text-stone-200 leading-relaxed">Introduction,</p>
-        <h2 className="text-4xl font-bold mb-4 text-orange-400">Overview</h2>
-        <p className="text-stone-200 leading-relaxed">
-          React Frontend Developer having over 4 years of experience for building
-          complex user interfaces using React, Redux, and other modern frontend
-          technologies. HTML5, CSS3, JavaScript​: Strong understanding of web
-          fundamentals and DOM manipulation.
-          <br />
-          <br />
-          Skilled in component-based architecture, state management using HOOKs,
-          and API integration. Collaborate with backend teams working with
-          Node.js, MySQL, MongoDB, Redis, and AWS to integrate APls. Optimize
-          components for maximum performance across web-capable devices and
-          browsers.
-          <br />
-          <br />
-          Ensure responsive design and optimize front-end performance for speed
-          and scalability. Proficient in version control (Git) and Agile
-          development methodologies.
-          <br />
-          <br />
-          Passionate to stay updated with the latest front-end trends update
-          released and follow best practices.
+      <section id="about" className="py-5 px-6 container mx-auto">
+        <p className="text-stone-200 font-semibold leading-relaxed">Introduction</p>
+        <h2 className="text-4xl font-bold mb-4 text-orange-400">Overview,</h2>
+        <p className="text-stone-200 text-xl leading-relaxed">
+      
+
+
+          Senior Software Engineer having over 4+ years of experience building complex and scalable user interfaces using React, Redux, and modern frontend technologies. Strong expertise in HTML5, CSS3, JavaScript, and deep understanding of web fundamentals, DOM manipulation, and responsive design principles.
+<br /><br />
+Skilled in component-based architecture, React Hooks, state management, and API integration. Experienced in collaborating with backend teams using Node.js, MySQL, MongoDB, Redis, and AWS to deliver seamless integrations. Adept at optimizing components for performance, speed, and scalability across devices and browsers.
+<br /><br />
+Proficient in Git version control and Agile methodologies, with a strong focus on clean, maintainable code and best practices. Recognized for problem-solving skills, adaptability in fast-paced environments, and delivering high-quality web applications that drive project success.
+<br /><br />
+Passionate about continuous learning, staying up to date with the latest frontend trends, and fostering effective collaboration through strong communication and interpersonal skills.
         </p>
+
+
       </section>
     </>
   );

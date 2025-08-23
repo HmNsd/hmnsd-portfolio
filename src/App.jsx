@@ -7,6 +7,7 @@ import Experience from "./components/Pages/Experience";
 import Contact from "./components/Pages/Contact";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Pages/Login";
+import Services from "./components/Pages/Services";
 
 function App() {
 
@@ -17,13 +18,14 @@ function App() {
         <Header />
         <main className="flex-grow container mx-auto mt-5 px-4">
           <Routes>
-            <Route path="/" element={<Home />} />
-            
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/hmnsd-portfolio" element={<Home />} />
+                   
+            <Route path="/hmnsd-portfolio/skills" element={<Skills />} />
+            <Route path="/hmnsd-portfolio/projects" element={<Projects />} />
+            <Route path="/hmnsd-portfolio/experience" element={<Experience />} />
+            <Route path="/hmnsd-portfolio/contact" element={<Contact />} />
+            <Route path="/hmnsd-portfolio/login" element={<Login />} />
+            <Route path="/hmnsd-portfolio/services" element={<Services />} />
           </Routes>
         </main>
         <Footer />
