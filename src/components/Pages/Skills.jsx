@@ -12,7 +12,7 @@ export default function Skills() {
 
   return (
     <>
-      <section id="skills" className="pt-20 px-6 container mx-auto">
+      <section id="skills" className="py-8 sm:py-12 px-6 container mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-orange-500">Skills</h2>
         <div className="flex flex-wrap gap-4 justify-start">
           {skills.map((skill, i) => (
