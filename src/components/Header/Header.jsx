@@ -18,7 +18,7 @@ export default function Navbar() {
           to="/hmnsd-portfolio"
           className="text-2xl text-white font-bold hover:text-orange-500"
         >
-          MyPortfolio
+          HMNSD
         </Link>
 
         {/* Desktop Nav Links */}
