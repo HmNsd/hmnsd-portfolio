@@ -1,10 +1,10 @@
 export default function Contact() {
   return (
     <>
-      <div className="isolation-auto px-6 py-10 sm:py-12 lg:px-8">
+      <div className="isolation-auto py-6 md:py-10 md:px-6 ">
         
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl text-orange-500">
+          <h2 className="text-3xl font-bold text-orange-500">
             Contact Us
           </h2>
         </div>
@@ -13,7 +13,7 @@ export default function Contact() {
           method="POST"
           className="mx-auto mt-5 max-w-xl sm:mt-10"
         >
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-8 md:gap-y-6 gap-y-2 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="first-name"
@@ -184,9 +184,9 @@ export default function Contact() {
         </form>
       </div>
 
-      <div className=" overflow-hidden py-10 sm:py-15 ">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+      <div className=" overflow-hidden py-4 md:py-12 ">
+        <div className="mx-auto px-2 md:px-6">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
               <h2 className="text-4xl font-semibold tracking-tight text-orange-400">
                 Brew n Code

@@ -6,7 +6,7 @@ export default function Login() {
       <div className="w-full max-w-md shadow-lg rounded-2xl p-8">
         {/* Logo */}
         <div className="text-center mb-6">
-          <h1 className="text-4xl font-bold text-stone-300 font-mono">Login</h1>
+          <h1 className="text-4xl font-bold text-orange-500">Login</h1>
         
         </div>
 

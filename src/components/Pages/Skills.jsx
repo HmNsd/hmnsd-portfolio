@@ -12,9 +12,9 @@ export default function Skills() {
 
   return (
     <>
-      <section id="skills" className="py-8 sm:py-12 px-6 container mx-auto">
+      <section id="skills" className="py-6 md:py-10 md:px-6 container mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-orange-500">Skills</h2>
-        <div className="flex flex-wrap gap-4 justify-start">
+        <div className="flex flex-wrap md:gap-4 gap-2 justify-start">
           {skills.map((skill, i) => (
             <span
               key={i}
@@ -26,11 +26,11 @@ export default function Skills() {
         </div>
       </section>
 
-      <section id="experience" className="py-10 px-6">
-        <div className="space-y-1 p-6 rounded-lg shadow ring-1 hover:shadow-lg">
+      <section id="experience" className="py-2 md:py-10 md:px-6">
+        <div className="space-y-1 md:p-6 p-4 rounded-lg shadow ring-1 hover:shadow-lg">
           <h2 className="text-2xl font-medium mb-2 ">Frontend Development</h2>
 
-          <div className="ps-2">
+          <div className="ps-3">
             <ul className="list-disc">
               <li className="m-1">
                 React.js & Hooks – component-driven UI, state & lifecycle
@@ -53,9 +53,9 @@ export default function Skills() {
             </ul>
           </div>
         </div>
-        <div className="space-y-1 mt-5 p-6 rounded-lg shadow ring-1 hover:shadow-lg">
+        <div className="space-y-1 md:mt-5 mt-2 md:p-6 p-4 rounded-lg shadow ring-1 hover:shadow-lg">
           <h2 className="text-2xl font-medium">Backend & Tools</h2>
-          <div className="ps-2">
+          <div className="ps-3">
             <ul className="list-disc">
               <li className="m-1">
                 Node.js & Express.js (basics) – REST APIs & server-side logic
@@ -75,9 +75,9 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="space-y-1 mt-5 p-6 rounded-lg shadow ring-1 hover:shadow-lg">
+        <div className="space-y-1 mt-5 md:p-6 p-4 rounded-lg shadow ring-1 hover:shadow-lg">
           <h2 className="text-2xl font-medium">Professional Skills</h2>
-          <div className="ps-2">
+          <div className="ps-3">
             <ul className="list-disc">
               <li className="m-1">
                 Strong problem-solving & debugging mindset{" "}
