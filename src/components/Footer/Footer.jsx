@@ -86,7 +86,7 @@ export default function Footer() {
             {new Date().getFullYear()} Himanshu Nishad Portfolio, All rights
             reserved by HMNSD.
           </span>
-          <div className="flex space-x-10  md:justify-around md:pt-0 pt-1">
+          <div className="flex space-x-10  md:justify-around md:p-0 p-1">
             <Link to="#" className="hover:text-blue-500 text-stone-50">
               <svg
                 className="w-4 h-4"
