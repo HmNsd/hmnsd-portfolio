@@ -8,6 +8,7 @@ import Contact from "./components/Pages/Contact";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Pages/Login";
 import Services from "./components/Pages/Services";
+import Users from "./components/User/Users";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/hmnsd-portfolio/contact" element={<Contact />} />
             <Route path="/hmnsd-portfolio/login" element={<Login />} />
             <Route path="/hmnsd-portfolio/services" element={<Services />} />
+            <Route path="/hmnsd-portfolio/user/:userId" element={<Users />} />
           </Routes>
         </main>
         <Footer />

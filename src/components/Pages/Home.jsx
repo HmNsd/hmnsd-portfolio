@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
+  // const [data, setData] = useState([])
+  // useEffect(()=>{
+  //   fetch('https://api.github.com/users/HmNsd')
+  //   .then(response => response.json())
+  //   .then((data)=>{
+  //     console.log(data);
+  //     setData(data)
+      
+  //   })
+
+  // })
   return (
     <>
       <section
         id="Home"
         className="h-full flex flex-col justify-center items-center text-center px-6 py-8 sm:py-12"
       >
+        {/* <img src={data.avatar_url} alt="git Image" width={300} /> */}
         <h1 className=" text-2xl md:text-5xl font-bold mb-2 sm:mb-4">
           Hi, I’m <span className="bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 bg-clip-text text-transparent">Himanshu Nishad</span>
         </h1>
-        <p className="text-sm md:text-2xl ">
-          Senior Software Engineer | HCLTECH | UnderArmour
+        <p className="text-sm md:text-2xl md:font-bold">
+          Senior Software Engineer | HCLTECH | UnderArmour&nbsp;
+          <img src="	https://www.svgrepo.com/show/303155/under-armour-logo.svg" alt="Google" className="w-4 md:w-10 rounded inline md:invert-75 invert"  />
         </p>
       </section>
 
