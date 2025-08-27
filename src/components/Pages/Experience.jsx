@@ -44,9 +44,9 @@ export default function Experience() {
             key={index}
             className="p-4 rounded-lg shadow ring-1 hover:shadow-lg"
           >
-            <h3 className="text-xl inline font-semibold">{experience.role}</h3>
-            <span className="inline">{experience.location}</span>
-            <div className="flex">
+            <h3 className="text-xl inline font-medium">{experience.role}</h3>
+            <span className="inline text-sm md:text">{experience.location}</span>
+            <div className="flex  text-xs md:text-lg">
               <p className="text-stone-300">{experience.duration}</p>
               <p className="text-stone-300">{experience.title}</p>
             </div>

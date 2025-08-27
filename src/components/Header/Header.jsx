@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link
           to="/hmnsd-portfolio"
           className="text-2xl  font-bold text-white hover:text-orange-400"
+          onClick={()=>((setIsOpen(false))(setShowSearch(false))) }
         >
           HMNSD
         </Link>
@@ -102,6 +103,7 @@ export default function Navbar() {
           <Link
             to="/hmnsd-portfolio/login"
             className="text-stone-900 hover:text-white bg-stone-100 hover:bg-orange-500 focus:ring-1  focus:ring-stone-100 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
+
           >
             Log in
           </Link>
@@ -117,14 +119,14 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center space-x-4">
           {/* Search Icon */}
           <button onClick={() => (setShowSearch(!showSearch))}>
-            <MagnifyingGlassIcon className="w-6 h-6 text-stone-50" />
+            <MagnifyingGlassIcon className="w-6 h-6 text-stone-50" onClick={()=>setIsOpen(false)} />
           </button>
           {/* Burger Menu */}
           <button onClick={() => (setIsOpen(!isOpen))}>
             {isOpen ? (
-              <XMarkIcon className="w-6 h-6 text-stone-50" />
+              <XMarkIcon className="w-6 h-6 text-stone-50" onClick={()=>(setShowSearch(false))} />
             ) : (
-              <Bars3Icon className="w-6 h-6 text-stone-50" />
+              <Bars3Icon className="w-6 h-6 text-stone-50" onClick={()=>(setShowSearch(false))} />
             )}
           </button>
         </div>
@@ -137,6 +139,7 @@ export default function Navbar() {
             type="text"
             placeholder="Search..."
             className="w-full border rounded-xl p-2 outline-none"
+            onClick={()=>setIsOpen(false)}
           />
         </div>
       )}
@@ -153,7 +156,9 @@ export default function Navbar() {
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
                   } border-b rounded-xl border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
+                  
                 }
+                onClick={()=>setIsOpen(false)}
               >
                 Skills
               </NavLink>
@@ -166,6 +171,7 @@ export default function Navbar() {
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
                   } border-b rounded-xl  border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
                 }
+                onClick={()=>setIsOpen(false)}
               >
                 Projects
               </NavLink>
@@ -178,6 +184,7 @@ export default function Navbar() {
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
                   } border-b rounded-xl  border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
                 }
+                onClick={()=>setIsOpen(false)}
               >
                 Experience
               </NavLink>
@@ -190,6 +197,7 @@ export default function Navbar() {
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
                   } border-b rounded-xl  border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
                 }
+                onClick={()=>setIsOpen(false)}
               >
                 Contact
               </NavLink>
@@ -202,6 +210,7 @@ export default function Navbar() {
                     isActive ? "text-orange-500 font-extrabold" : "text-white"
                   } border-b rounded-xl  border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0`
                 }
+                onClick={()=>setIsOpen(false)}
               >
                 Services
               </NavLink>
@@ -213,12 +222,14 @@ export default function Navbar() {
             <Link
               to="/hmnsd-portfolio/login"
               className="flex-1 px-4 py-2 text-stone-900 hover:text-white bg-stone-100 hover:bg-orange-500 focus:ring-1  focus:ring-stone-100 font-medium rounded-lg text-sm text-center focus:outline-none"
+              onClick={()=>setIsOpen(false)}
             >
               Log in
             </Link>
             <Link
               to="#"
               className="flex-1 px-4 py-2 text-white text-center bg-black hover:bg-orange-500 focus:ring-1 focus:ring-black font-medium rounded-lg text-sm focus:outline-none"
+              onClick={()=>setIsOpen(false)}
             >
               Sing Up
             </Link>
