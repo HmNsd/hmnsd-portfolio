@@ -19,7 +19,7 @@ export default function Home() {
         className="h-full flex flex-col justify-center items-center text-center px-6 py-8 sm:py-12"
       >
         {/* <img src={data.avatar_url} alt="git Image" width={300} /> */}
-        <h1 className=" text-2xl md:text-5xl font-bold mb-2 sm:mb-4">
+        <h1 className=" text-xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4">
           Hi, I’m <span className="bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 bg-clip-text text-transparent">Himanshu Nishad</span>
         </h1>
         <span className="text-sm md:text-2xl md:font-bold font-extralight">
@@ -29,8 +29,8 @@ export default function Home() {
       </section>
 
       <section id="about" className="py-2 sm:py-5 px-6 container mx-auto">
-        <p className="text-stone-200 md:font-semibold leading-relaxed ">Introduction</p>
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-blue-400">Overview,</h2>
+        <p className="text-stone-200 font-medium sm:font-semibold text-sm sm:text-base leading-relaxed ">Introduction</p>
+        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold  sm:mb-4 text-blue-400">Overview,</h2>
         <p className="text-stone-100 text:l md:text-xl leading-relaxed">
       
 
