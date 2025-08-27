@@ -22,10 +22,10 @@ export default function Home() {
         <h1 className=" text-2xl md:text-5xl font-bold mb-2 sm:mb-4">
           Hi, I’m <span className="bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 bg-clip-text text-transparent">Himanshu Nishad</span>
         </h1>
-        <p className="text-sm md:text-2xl md:font-bold">
+        <span className="text-sm md:text-2xl md:font-bold font-extralight">
           Senior Software Engineer | HCLTECH | UnderArmour&nbsp;
           <img src="	https://www.svgrepo.com/show/303155/under-armour-logo.svg" alt="Google" className="w-4 md:w-10 rounded inline md:invert-75 invert"  />
-        </p>
+        </span>
       </section>
 
       <section id="about" className="py-2 sm:py-5 px-6 container mx-auto">
