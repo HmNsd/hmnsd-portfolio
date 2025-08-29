@@ -17,7 +17,6 @@ export default function Navbar() {
         <Link
           to="/hmnsd-portfolio"
           className="text-2xl  font-bold text-white hover:text-orange-400"
-          onClick={()=>((setIsOpen(false))(setShowSearch(false))) }
         >
           HMNSD
         </Link>
