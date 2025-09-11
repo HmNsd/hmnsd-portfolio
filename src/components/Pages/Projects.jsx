@@ -1,7 +1,8 @@
 export default function Projects() {
   const projects = [
-    { title: "Portfolio Web App", desc: "Built with React & Tailwind" },
-    { title: "Employee Management System", desc: "Full-stack MERN project" },
+    
+    { title: "Employee Management System", desc: "HTML | CSS | TypeScript | SpringBoot | Angular" },
+    { title: "Portfolio Web App", desc: "React | TailwindCSS | Routes | UI-Designed" },
     { title: "Password Generator App", desc: "React | TailwindCSS | React Hooks | HTML & CSS" },
     { title: "E-Commerce Web App", desc: "React | Bootstrap | React Hooks | HTML & CSS" }
   ];
