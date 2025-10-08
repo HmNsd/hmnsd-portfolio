@@ -24,10 +24,10 @@ export default function Home() {
       </section>
 
       <section id="about" className="py-2 sm:py-5 px-6 container mx-auto">
-        <p className="text-stone-200 font-medium sm:font-semibold text-sm sm:text-base leading-relaxed ">
+        <p className="text-blue-200 font-medium sm:font-semibold text-sm sm:text-base leading-relaxed ">
           Introduction
         </p>
-        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold  sm:mb-4 text-blue-400">
+        <h2 className="text-xl sm:text-2xl md:text-4xl font-bold  sm:mb-4 text-blue-200">
           Overview,
         </h2>
         <p className="text-stone-100 text:l md:text-xl leading-relaxed">
