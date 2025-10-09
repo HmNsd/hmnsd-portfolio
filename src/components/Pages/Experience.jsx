@@ -2,7 +2,7 @@ export default function Experience() {
   const experience = [
     {
       role: "Senior Software Engineer",
-      location: " - HCLTech Lucknow",
+      location: " - HCLTech, Lucknow",
       duration: "Oct_2024 - Present |",
       title: "| Building scalable enterprise apps",
       description: [
@@ -13,7 +13,7 @@ export default function Experience() {
       ],
     },{
       role: "Software Engineer",
-      location: " - HCLTech Chennai",
+      location: " - HCLTech, Chennai",
       duration: "Mar_2022 - Sep_2024 |",
       title: "| Focused on frontend using React",
       description: [
@@ -24,7 +24,7 @@ export default function Experience() {
       ],
     },{
       role: "Graduate Engineer",
-      location: " - HCLTech Noida",
+      location: " - HCLTech, Noida",
       duration: "Sep_2021 - Feb_2022 |",
       title: "| Full Stack Development",
       description: [

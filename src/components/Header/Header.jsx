@@ -88,8 +88,8 @@ export default function Navbar() {
         </div>
 <div className="hidden lg:flex space-x-8">
         {/* Search Bar (Desktop) */}
-        <div className="hidden lg:flex items-center border border-b-stone-400 rounded-lg px-2">
-          <MagnifyingGlassIcon className="w-5 h-5 " />
+        <div className="hidden lg:flex items-center border-b-stone-500 border-b-1 rounded-3xl px-2">
+          <MagnifyingGlassIcon className="w-5 h-5" />
           <input
             type="text"
             placeholder="Search..."

@@ -8,9 +8,14 @@ export default function Skills() {
     "MongoDB",
     "GitHub",
     "AWS",
-    "JavaScript(ES6+)",
     "TypeScript",
-    "HTML & CSS"
+    "JavaScript(ES6+)",
+    "HTML5 & CSS3",
+    "Redux Toolkit",
+    "Context API",
+    "REST APIs",
+    "Bcrypt & JWT",
+    
   ];
 
   return (
@@ -21,7 +26,7 @@ export default function Skills() {
           {skills.map((skill, i) => (
             <span
               key={i}
-              className="px-4 py-2 bg-stone-900 hover:bg-white hover:text-black rounded-lg shadow "
+              className="px-4 py-2 font-semibold text-stone-900 bg-stone-200 hover:bg-stone-900 hover:text-white rounded-lg shadow "
             >
               {skill}
             </span>

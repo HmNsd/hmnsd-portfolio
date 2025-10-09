@@ -2,9 +2,9 @@ export default function Projects() {
   const projects = [
     
     { title: "Employee Management System", desc: "HTML | CSS | TypeScript | SpringBoot | Angular" },
-    { title: "Authentication Web App", desc: "TypeScript | NextJS | Tailwind | Bcrypt | JWT | NodeMailer" },
-    { title: "Portfolio Web App", desc: "React | Tailwind | GSAP | UI-Designed" },
-    { title: "Password Generator App", desc: "React | Tailwind | React Hooks | HTML & CSS" },
+    { title: "Auth NextJS App", desc: "TypeScript | NextJS | Tailwind | Bcrypt | JWT | NodeMailer" },
+    { title: "Portfolio", desc: "React | Tailwind | GSAP | UI-Designed" },
+    { title: "Password Shield Web App ", desc: "React | Tailwind | React Hooks | HTML & CSS" },
     { title: "E-Commerce Web App", desc: "React | Bootstrap | React Hooks | HTML & CSS" },
   ];
   

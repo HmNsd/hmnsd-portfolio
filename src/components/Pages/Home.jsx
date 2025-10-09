@@ -31,18 +31,21 @@ export default function Home() {
           Overview,
         </h2>
         <p className="text-stone-100 text:l md:text-xl leading-relaxed">
-          Senior Software Engineer having over 4+ years of experience building
-          complex and scalable user interfaces using React, Redux, and modern
-          frontend technologies. Strong expertise in HTML5, CSS3, JavaScript,
-          and deep understanding of web fundamentals, DOM manipulation, and
-          responsive design principles.
+          Senior Software Engineer with over 4 years of experience designing and
+          developing scalable, high-performance web applications using React,
+          Redux, and TypeScript. Strong foundation and expertise in building
+          robust RESTful APIs and full-stack solutions with Node.js, Express.js,
+          Next.js, and MongoDB. Adept in delivering clean, maintainable code and
+          crafting modern, responsive user interfaces using Tailwind CSS,
+          MagicUI, and Aceternity UI, with a strong focus on usability and
+          performance.
           <br />
           <br />
-          Skilled in component-based architecture, React Hooks, state
-          management, and API integration. Experienced in collaborating with
-          backend teams using Node.js, MySQL, MongoDB, Redis, and AWS to deliver
-          seamless integrations. Adept at optimizing components for performance,
-          speed, and scalability across devices and browsers.
+          Experienced in deploying, scaling, and managing applications on AWS,
+          with a deep understanding of web architecture, UI/UX best practices.
+          Recognized for driving technical excellence and delivering solutions
+          that align with business goals. Adept at optimizing components for
+          performance, speed, and scalability across devices and browsers.
           <br />
           <br />
           Proficient in Git version control and Agile methodologies, with a
@@ -57,7 +60,6 @@ export default function Home() {
           strong communication and interpersonal skills.
         </p>
       </section>
-      
     </>
   );
 }
