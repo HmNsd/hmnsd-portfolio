@@ -50,17 +50,20 @@ export default function Navbar() {
       className="border border-l-0 border-r-0 border-t-0 rounded-b-2xl shadow-md sticky top-0 z-50"
       style={{
         background: isDark 
-          ? 'linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(51, 51, 51, 0.9))' 
-          : 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)'
+          ? 'rgba(0, 0, 0, 0.7)' 
+          : 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(15px)',
+        WebkitBackdropFilter: 'blur(15px)',
+        border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
       }}
     >
       <div className=" mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <a
           href="#Home"
-          className="text-2xl  font-bold text-white hover:text-orange-400"
+          className="text-2xl font-bold hover:text-orange-500"
+          style={{ color: isDark ? '#ffffff' : '#1f2937' }}
         >
           HMNSD
         </a>
@@ -71,8 +74,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#skills"
-                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0 ${
-                  activeSection === 'skills' ? 'text-orange-400 font-bold' : 'text-white'
+                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0 ${
+                  activeSection === 'skills' ? 'text-orange-500 font-bold' : isDark ? 'text-white' : 'text-gray-800'
                 }`}
                 style={{ scrollBehavior: 'smooth' }}
               >
@@ -82,8 +85,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#projects"
-                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0 ${
-                  activeSection === 'projects' ? 'text-orange-400 font-bold' : 'text-white'
+                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0 ${
+                  activeSection === 'projects' ? 'text-orange-500 font-bold' : isDark ? 'text-white' : 'text-gray-800'
                 }`}
                 style={{ scrollBehavior: 'smooth' }}
               >
@@ -93,8 +96,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#experience"
-                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0 ${
-                  activeSection === 'experience' ? 'text-orange-400 font-bold' : 'text-white'
+                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0 ${
+                  activeSection === 'experience' ? 'text-orange-500 font-bold' : isDark ? 'text-white' : 'text-gray-800'
                 }`}
                 style={{ scrollBehavior: 'smooth' }}
               >
@@ -104,8 +107,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0 ${
-                  activeSection === 'contact' ? 'text-orange-400 font-bold' : 'text-white'
+                className={`block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0 ${
+                  activeSection === 'contact' ? 'text-orange-500 font-bold' : isDark ? 'text-white' : 'text-gray-800'
                 }`}
                 style={{ scrollBehavior: 'smooth' }}
               >
@@ -118,11 +121,14 @@ export default function Navbar() {
 <div className="hidden lg:flex space-x-8">
         {/* Search Bar (Desktop) */}
         <div className="hidden lg:flex items-center border-b-stone-500 border-b-1 rounded-3xl px-2">
-          <MagnifyingGlassIcon className="w-5 h-5" />
+          <MagnifyingGlassIcon className="w-5 h-5" style={{ color: isDark ? '#ffffff' : '#1f2937' }} />
           <input
             type="text"
-            placeholder="Search..."
-            className="ml-2 outline-none p-1 w-25"
+            className="ml-2 outline-none p-1 w-25 bg-transparent"
+            style={{
+              color: isDark ? '#ffffff' : '#1f2937',
+              '::placeholder': { color: isDark ? '#9ca3af' : '#6b7280' }
+            }}
           />
         </div>
 
@@ -146,19 +152,30 @@ export default function Navbar() {
         <button 
           onClick={() => setIsDark(!isDark)}
           className="hidden lg:block p-2 rounded-lg hover:bg-stone-600 transition-colors"
+          style={{
+            border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+            backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+          }}
         >
-          {isDark ? <SunIcon className="w-5 h-5 text-white" /> : <MoonIcon className="w-5 h-5 text-white" />}
+          {isDark ? <SunIcon className="w-5 h-5" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-5 h-5" style={{ color: '#1f2937' }} />}
         </button>
 
         {/* Mobile Icons */}
         <div className="flex lg:hidden items-center space-x-4">
           {/* Theme Toggle (Mobile) */}
-          <button onClick={() => setIsDark(!isDark)}>
-            {isDark ? <SunIcon className="w-6 h-6 text-stone-50" /> : <MoonIcon className="w-6 h-6 text-stone-50" />}
+          <button 
+            onClick={() => setIsDark(!isDark)}
+            className="p-2 rounded-lg transition-colors"
+            style={{
+              border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
+              backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
+            }}
+          >
+            {isDark ? <SunIcon className="w-6 h-6" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-6 h-6" style={{ color: '#1f2937' }} />}
           </button>
           {/* Search Icon */}
           <button onClick={() => (setShowSearch(!showSearch))}>
-            <MagnifyingGlassIcon className="w-6 h-6 text-stone-50" onClick={()=>setIsOpen(false)} />
+            <MagnifyingGlassIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>setIsOpen(false)} />
           </button>
           {/* Burger Menu */}
           <button onClick={() => (setIsOpen(!isOpen))}>
@@ -178,6 +195,11 @@ export default function Navbar() {
             type="text"
             placeholder="Search..."
             className="w-full border rounded-xl p-2 outline-none"
+            style={{
+              backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)',
+              color: isDark ? '#ffffff' : '#1f2937',
+              borderColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'
+            }}
             onClick={()=>setIsOpen(false)}
           />
         </div>
@@ -191,10 +213,12 @@ export default function Navbar() {
             id="mobile-menu-2"
             style={{
               background: isDark 
-                ? 'linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(51, 51, 51, 0.95))' 
-                : 'rgba(255, 255, 255, 0.98)',
-              backdropFilter: 'blur(10px)',
-              WebkitBackdropFilter: 'blur(10px)'
+                ? 'rgba(0, 0, 0, 0.8)' 
+                : 'rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(15px)',
+              WebkitBackdropFilter: 'blur(15px)',
+              border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+              boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
             }}
           >
           <ul className="flex flex-col lg:flex-row font-light lg:space-x-8 lg:mt-0">

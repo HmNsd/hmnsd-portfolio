@@ -137,8 +137,11 @@ export default function Home() {
           Senior Software Engineer | HCLTECH | UnderArmour&nbsp;
           <img
             src="	https://www.svgrepo.com/show/303155/under-armour-logo.svg"
-            alt="Google"
+            alt="UnderArmour"
             className="w-4 md:w-10 rounded inline"
+            style={{
+              filter: isDark ? 'brightness(0) invert(1)' : 'brightness(0) invert(0)'
+            }}
           />
         </motion.span>
       </motion.section>
@@ -150,13 +153,13 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <p className="text-orange-300 font-semibold text-sm sm:text-base leading-relaxed uppercase tracking-widest mb-2">
+        <p className="font-semibold text-sm sm:text-base leading-relaxed uppercase tracking-widest mb-2" style={{ color: isDark ? '#fed7aa' : '#ea580c' }}>
           Introduction
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-orange-400 tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 tracking-tight" style={{ color: isDark ? '#fb923c' : '#ea580c' }}>
           Overview
         </h2>
-        <p className="text-gray-200 text-lg md:text-xl leading-relaxed font-light">
+        <p className="text-lg md:text-xl leading-relaxed font-light" style={{ color: isDark ? '#e5e7eb' : '#374151' }}>
           Senior Software Engineer with over 4 years of experience designing and
           developing scalable, high-performance web applications using React,
           Redux, and TypeScript. Strong foundation and expertise in building
@@ -196,7 +199,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-orange-400 tracking-tight">Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: isDark ? '#fb923c' : '#ea580c' }}>Skills</h2>
         <div ref={skillsRef} className="flex flex-wrap md:gap-4 gap-2 justify-start">
           {["React", "NodeJS", "ExpressJS", "NextJS", "TailwindCSS", "MongoDB", "GitHub", "AWS", "TypeScript", "JavaScript(ES6+)", "HTML5 & CSS3", "Redux Toolkit", "Context API", "REST APIs", "Bcrypt & JWT"].map((skill, i) => (
             <span 
@@ -224,7 +227,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-orange-400 tracking-tight">Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: isDark ? '#fb923c' : '#ea580c' }}>Projects</h2>
         <div ref={projectsRef} className="grid md:grid-cols-2 md:gap-4 gap-2">
           {[
             { title: "Employee Management System", desc: "HTML | CSS | TypeScript | SpringBoot | Angular" },
@@ -258,7 +261,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-orange-400 tracking-tight">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: isDark ? '#fb923c' : '#ea580c' }}>Experience</h2>
         <div ref={experienceRef} className="space-y-4">
           {[
             {
@@ -334,8 +337,8 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-orange-400 tracking-tight">Contact</h2>
-        <p className="text-xl mb-6 font-light leading-relaxed">Get in touch for opportunities and collaborations.</p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: isDark ? '#fb923c' : '#ea580c' }}>Contact</h2>
+        <p className="text-xl mb-6 font-light leading-relaxed" style={{ color: isDark ? '#e5e7eb' : '#374151' }}>Get in touch for opportunities and collaborations.</p>
         <div className="flex space-x-4">
           <motion.a 
             href="mailto:himanshu@example.com" 
