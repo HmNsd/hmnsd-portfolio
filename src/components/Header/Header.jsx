@@ -50,8 +50,8 @@ export default function Navbar() {
       className="border border-l-0 border-r-0 border-t-0 rounded-b-2xl shadow-md sticky top-0 z-50"
       style={{
         background: isDark 
-          ? 'rgba(0, 0, 0, 0.7)' 
-          : 'rgba(255, 255, 255, 0.7)',
+          ? 'rgba(0, 0, 0, 0.4)' 
+          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(248, 249, 250, 0.6))',
         backdropFilter: 'blur(15px)',
         WebkitBackdropFilter: 'blur(15px)',
         border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
@@ -180,9 +180,9 @@ export default function Navbar() {
           {/* Burger Menu */}
           <button onClick={() => (setIsOpen(!isOpen))}>
             {isOpen ? (
-              <XMarkIcon className="w-6 h-6 text-stone-50" onClick={()=>(setShowSearch(false))} />
+              <XMarkIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>(setShowSearch(false))} />
             ) : (
-              <Bars3Icon className="w-6 h-6 text-stone-50" onClick={()=>(setShowSearch(false))} />
+              <Bars3Icon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>(setShowSearch(false))} />
             )}
           </button>
         </div>
@@ -213,8 +213,8 @@ export default function Navbar() {
             id="mobile-menu-2"
             style={{
               background: isDark 
-                ? 'rgba(0, 0, 0, 0.8)' 
-                : 'rgba(255, 255, 255, 0.8)',
+                ? 'rgba(0, 0, 0, 0.6)' 
+                : 'linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(248, 249, 250, 0.7))',
               backdropFilter: 'blur(15px)',
               WebkitBackdropFilter: 'blur(15px)',
               border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
@@ -225,7 +225,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#skills"
-                className="block py-2 pr-4 pl-3 duration-200 text-white border-b rounded-xl border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0"
+                className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
+                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Skills
@@ -234,7 +235,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#projects"
-                className="block py-2 pr-4 pl-3 duration-200 text-white border-b rounded-xl border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0"
+                className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
+                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Projects
@@ -243,7 +245,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#experience"
-                className="block py-2 pr-4 pl-3 duration-200 text-white border-b rounded-xl border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0"
+                className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
+                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Experience
@@ -252,7 +255,8 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="block py-2 pr-4 pl-3 duration-200 text-white border-b rounded-xl border-gray-100 hover:bg-stone-950 lg:hover:bg-transparent lg:border-0 hover:text-orange-400 lg:p-0"
+                className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
+                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Contact

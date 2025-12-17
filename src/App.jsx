@@ -13,7 +13,7 @@ function App() {
       style={{
         background: isDark 
           ? 'linear-gradient(135deg, #000000, #333333, #000000)' 
-          : '#ffffff',
+          : 'linear-gradient(135deg, #ffffff, #f8f9fa, #ffffff)',
         color: isDark ? '#ffffff' : '#000000'
       }}
     >

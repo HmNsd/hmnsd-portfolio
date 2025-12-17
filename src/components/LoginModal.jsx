@@ -1,12 +1,18 @@
 import { Mail, Lock, X } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function LoginModal({ isOpen, onClose }) {
   const { isDark } = useTheme();
+  const modalRef = useRef(null);
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && modalRef.current) {
+      gsap.fromTo(modalRef.current, 
+        { scale: 0.5, opacity: 0, rotateY: -90 },
+        { scale: 1, opacity: 1, rotateY: 0, duration: 0.6, ease: "back.out(1.7)" }
+      );
       setTimeout(() => {
         alert('This is just a UI demo! The login functionality will work once we build it for you.');
       }, 200);
@@ -19,6 +25,7 @@ export default function LoginModal({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div 
+        ref={modalRef}
         className="relative w-full max-w-md shadow-lg rounded-2xl p-8 mx-4"
         style={{
           background: isDark 

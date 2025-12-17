@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion} from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,7 +13,6 @@ export default function Home() {
   const experienceRef = useRef(null);
   const [nameText, setNameText] = useState('');
   const fullName = 'Himanshu Nishad';
-  const controls = useAnimation();
 
   useEffect(() => {
     // GSAP animations for skills
@@ -341,7 +340,7 @@ export default function Home() {
         <p className="text-xl mb-6 font-light leading-relaxed" style={{ color: isDark ? '#e5e7eb' : '#374151' }}>Get in touch for opportunities and collaborations.</p>
         <div className="flex space-x-4">
           <motion.a 
-            href="mailto:himanshu@example.com" 
+            href="mailto:himanshunishadofficial@gmail.com" 
             className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
             whileHover={{ scale: 1.1, rotate: 2, boxShadow: "0 10px 25px rgba(251, 146, 60, 0.3)" }}
             whileTap={{ scale: 0.95 }}
