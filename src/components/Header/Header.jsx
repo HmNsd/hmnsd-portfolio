@@ -63,7 +63,7 @@ export default function Navbar() {
         <a
           href="#Home"
           className="text-2xl font-bold hover:text-orange-500"
-          style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+          style={{ color: isDark ? '#ffffff' : '#000000' }}
         >
           HMNSD
         </a>
@@ -121,12 +121,12 @@ export default function Navbar() {
 <div className="hidden lg:flex space-x-8">
         {/* Search Bar (Desktop) */}
         <div className="hidden lg:flex items-center border-b-stone-500 border-b-1 rounded-3xl px-2">
-          <MagnifyingGlassIcon className="w-5 h-5" style={{ color: isDark ? '#ffffff' : '#1f2937' }} />
+          <MagnifyingGlassIcon className="w-5 h-5" style={{ color: isDark ? '#ffffff' : '#000000' }} />
           <input
             type="text"
             className="ml-2 outline-none p-1 w-25 bg-transparent"
             style={{
-              color: isDark ? '#ffffff' : '#1f2937',
+              color: isDark ? '#ffffff' : '#000000',
               '::placeholder': { color: isDark ? '#9ca3af' : '#6b7280' }
             }}
           />
@@ -157,7 +157,7 @@ export default function Navbar() {
             backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
           }}
         >
-          {isDark ? <SunIcon className="w-5 h-5" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-5 h-5" style={{ color: '#1f2937' }} />}
+          {isDark ? <SunIcon className="w-5 h-5" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-5 h-5" style={{ color: '#000000' }} />}
         </button>
 
         {/* Mobile Icons */}
@@ -171,18 +171,18 @@ export default function Navbar() {
               backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
             }}
           >
-            {isDark ? <SunIcon className="w-6 h-6" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-6 h-6" style={{ color: '#1f2937' }} />}
+            {isDark ? <SunIcon className="w-6 h-6" style={{ color: '#ffffff' }} /> : <MoonIcon className="w-6 h-6" style={{ color: '#000000' }} />}
           </button>
           {/* Search Icon */}
           <button onClick={() => (setShowSearch(!showSearch))}>
-            <MagnifyingGlassIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>setIsOpen(false)} />
+            <MagnifyingGlassIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#000000' }} onClick={()=>setIsOpen(false)} />
           </button>
           {/* Burger Menu */}
           <button onClick={() => (setIsOpen(!isOpen))}>
             {isOpen ? (
-              <XMarkIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>(setShowSearch(false))} />
+              <XMarkIcon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#000000' }} onClick={()=>(setShowSearch(false))} />
             ) : (
-              <Bars3Icon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#1f2937' }} onClick={()=>(setShowSearch(false))} />
+              <Bars3Icon className="w-6 h-6" style={{ color: isDark ? '#ffffff' : '#000000' }} onClick={()=>(setShowSearch(false))} />
             )}
           </button>
         </div>
@@ -197,7 +197,7 @@ export default function Navbar() {
             className="w-full border rounded-xl p-2 outline-none"
             style={{
               backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.05)',
-              color: isDark ? '#ffffff' : '#1f2937',
+              color: isDark ? '#ffffff' : '#000000',
               borderColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'
             }}
             onClick={()=>setIsOpen(false)}
@@ -226,7 +226,7 @@ export default function Navbar() {
               <a
                 href="#skills"
                 className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
-                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                style={{ color: isDark ? '#ffffff' : '#000000' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Skills
@@ -236,7 +236,7 @@ export default function Navbar() {
               <a
                 href="#projects"
                 className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
-                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                style={{ color: isDark ? '#ffffff' : '#000000' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Projects
@@ -246,7 +246,7 @@ export default function Navbar() {
               <a
                 href="#experience"
                 className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
-                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                style={{ color: isDark ? '#ffffff' : '#000000' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Experience
@@ -256,7 +256,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 className="block py-2 pr-4 pl-3 duration-200 border-b rounded-xl border-gray-100 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 lg:p-0"
-                style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                style={{ color: isDark ? '#ffffff' : '#000000' }}
                 onClick={()=>setIsOpen(false)}
               >
                 Contact

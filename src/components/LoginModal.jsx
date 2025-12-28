@@ -38,7 +38,7 @@ export default function LoginModal({ isOpen, onClose }) {
       >
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+          className="absolute top-4 right-4 p-1 rounded-full hover:bg-black dark:hover:bg-stone-400"
         >
           <X className="w-5 h-5" />
         </button>
