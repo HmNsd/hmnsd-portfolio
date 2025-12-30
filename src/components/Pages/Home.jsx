@@ -1,18 +1,25 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { useHighlight } from "../../context/Search";
+
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home() {
+export default function Home({ searchText, setMatchCount }) {
   const { isDark } = useTheme();
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
   const [nameText, setNameText] = useState("");
   const fullName = "Himanshu Nishad";
+
+  const contentRef = useRef(null);
+
+  useHighlight(searchText, contentRef, setMatchCount);
+
 
   useEffect(() => {
     // GSAP animations for skills
@@ -86,7 +93,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div  ref={contentRef}>
       <motion.section
         id="Home"
         className="h-full flex flex-col justify-center items-center text-center px-6 py-8 sm:py-12"
@@ -447,7 +454,7 @@ export default function Home() {
           className="text-xl mb-6 font-light leading-relaxed"
           style={{ color: isDark ? "#e5e7eb" : "#374151" }}
         >
-          Get in touch for opportunities and collaborations.
+        To connect and get in touch for collaborations.
         </p>
         <div className="flex space-x-4">
           <motion.a
@@ -485,6 +492,6 @@ export default function Home() {
           </motion.a>
         </div>
       </motion.section>
-    </>
+    </div>
   );
 }

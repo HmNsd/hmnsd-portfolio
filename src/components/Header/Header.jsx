@@ -10,12 +10,40 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import LoginModal from "../LoginModal";
 
-export default function Navbar() {
+
+export default function Navbar({ onSearch, matchCount }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
   const [showLoginModal, setShowLoginModal] = useState(false);
   const { isDark, setIsDark } = useTheme();
+
+  const [value, setValue] = useState("");
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) { // trigger shrink after 50px scroll
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onSearch(value);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [value, onSearch]);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,18 +74,24 @@ export default function Navbar() {
 
   return (
     <>
-    <nav 
-      className="border border-l-0 border-r-0 border-t-0 rounded-b-2xl shadow-md sticky top-0 z-50"
-      style={{
-        background: isDark 
-          ? 'rgba(0, 0, 0, 0.4)' 
-          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(248, 249, 250, 0.6))',
-        backdropFilter: 'blur(15px)',
-        WebkitBackdropFilter: 'blur(15px)',
-        border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
-      }}
-    >
+   <nav
+  className={`
+     z-50 rounded-2xl shadow-md mx-auto transition-all duration-300
+    w-full
+    lg:${isScrolled ? 'w-11/12 sticky top-2' : 'w-full sticky top-0'}
+    md:${isScrolled ? 'w-11/12 sticky top-2' : 'w-full sticky top-0'}
+  `}
+  style={{
+    background: isDark
+      ? 'rgba(0, 0, 0, 0.4)'
+      : 'linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(248, 249, 250, 0.6))',
+    backdropFilter: 'blur(5px)',
+    WebkitBackdropFilter: 'blur(15px)',
+    border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}`,
+  }}
+>
+
+
       <div className=" mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <a
@@ -128,8 +162,14 @@ export default function Navbar() {
             style={{
               color: isDark ? '#ffffff' : '#000000',
               '::placeholder': { color: isDark ? '#9ca3af' : '#6b7280' }
-            }}
+            }} value={value}
+      onChange={(e) => setValue(e.target.value)}
           />
+          {value && (
+        <span>
+          {matchCount} match{matchCount !== 1 ? "es" : ""}
+        </span>
+      )}
         </div>
 
         {/* Buttons (Desktop) */}
@@ -151,7 +191,7 @@ export default function Navbar() {
         {/* Theme Toggle (Desktop) */}
         <button 
           onClick={() => setIsDark(!isDark)}
-          className="hidden lg:block p-2 rounded-lg hover:bg-stone-600 transition-colors"
+          className="hidden lg:block p-2 rounded-2xl hover:bg-stone-600 transition-colors"
           style={{
             border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
             backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
@@ -165,7 +205,7 @@ export default function Navbar() {
           {/* Theme Toggle (Mobile) */}
           <button 
             onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded-lg transition-colors"
+            className="p-2 rounded-2xl transition-colors"
             style={{
               border: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'}`,
               backgroundColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'
@@ -200,8 +240,14 @@ export default function Navbar() {
               color: isDark ? '#ffffff' : '#000000',
               borderColor: isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'
             }}
-            onClick={()=>setIsOpen(false)}
+            onClick={()=>setIsOpen(false)} value={value}
+      onChange={(e) => setValue(e.target.value)}
           />
+          {value && (
+        <span style={{ marginLeft: "5px" }}>
+          {matchCount} match{matchCount !== 1 ? "es" : ""}
+        </span>
+      )}
         </div>
       )}
 

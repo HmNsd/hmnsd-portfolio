@@ -1,10 +1,16 @@
 import { useTheme } from "../../context/ThemeContext";
 
-export default function Footer() {
+import { useRef } from "react";
+import { useHighlight } from "../../context/Search";
+
+export default function Footer({ searchText, setMatchCount }) {
   const { isDark } = useTheme();
-  
+  const contentRef = useRef(null);
+
+  useHighlight(searchText, contentRef, setMatchCount);
+
   return (
-    <footer 
+    <footer ref={contentRef}
       className="flex sm:py-2 text-center"
       style={{
         background: isDark 

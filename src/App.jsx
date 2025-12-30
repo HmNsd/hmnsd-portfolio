@@ -3,10 +3,21 @@ import Header from "./components/Header/Header";
 import Home from "./components/Pages/Home";
 import Footer from "./components/Footer/Footer";
 import { useTheme } from "./context/ThemeContext";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const { isDark } = useTheme();
-  
+  const [searchText, setSearchText] = useState("");
+  const [matchCount, setMatchCount] = useState(0);
+
+  const location = useLocation();
+
+  useEffect(() => {
+  setSearchText("");
+}, [location.pathname]);
+
+
   return (
     <div 
       className="min-h-screen flex flex-col"
@@ -17,17 +28,17 @@ function App() {
         color: isDark ? '#ffffff' : '#000000'
       }}
     >
-      <Header />
+      <Header onSearch={setSearchText} matchCount={matchCount} />
       <main className="flex-grow container mx-auto mt-5 px-4">
         <Routes>
-          <Route path="/hmnsd-portfolio" element={<Home />} />
-          <Route path="/hmnsd-portfolio/skills" element={<Home />} />
-          <Route path="/hmnsd-portfolio/projects" element={<Home />} />
-          <Route path="/hmnsd-portfolio/experience" element={<Home />} />
-          <Route path="/hmnsd-portfolio/contact" element={<Home />} />
+          <Route path="/hmnsd-portfolio" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
+          <Route path="/hmnsd-portfolio/skills" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
+          <Route path="/hmnsd-portfolio/projects" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
+          <Route path="/hmnsd-portfolio/experience" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
+          <Route path="/hmnsd-portfolio/contact" element={<Home searchText={searchText}/>} />
         </Routes>
       </main>
-      <Footer />
+      <Footer searchText={searchText} />
     </div>
   );
 }
