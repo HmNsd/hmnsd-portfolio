@@ -86,7 +86,7 @@ export default function Footer({ searchText, setMatchCount }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Github
+                  GitHub
                 </a>
               </li>
               <li>
@@ -101,7 +101,7 @@ export default function Footer({ searchText, setMatchCount }) {
         <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0">
           <p className="text-sm font-medium text-center md:text-left" style={{ color: isDark ? '#d1d5db' : '#6b7280' }}>
             <span className="font-bold" style={{ color: isDark ? '#ffffff' : '#000000' }}>&copy;</span>{" "}
-            {new Date().getFullYear()} Himanshu Nishad Portfolio. All rights reserved.
+            2021 Himanshu Nishad Portfolio. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="hover:scale-110 transition-all duration-300 hover:drop-shadow-lg">
@@ -111,7 +111,7 @@ export default function Footer({ searchText, setMatchCount }) {
               <span className="sr-only">Facebook</span>
             </a>
             <a href="#" className="hover:scale-110 transition-all duration-300 hover:drop-shadow-lg">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#000000">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill={isDark ? '#ffffff' : '#333333'}>
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
               <span className="sr-only">X (Twitter)</span>

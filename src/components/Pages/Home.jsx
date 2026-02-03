@@ -171,26 +171,26 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <p
           className="font-semibold text-sm sm:text-base leading-relaxed uppercase tracking-widest mb-2"
-          style={{ color: isDark ? "#fed7aa" : "#ea580c" }}
+          style={{ color: isDark ? "#ada9a8" : "#545352" }}
         >
           Introduction
         </p>
         <h2
-          className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 tracking-tight"
-          style={{ color: isDark ? "#fb923c" : "#ea580c" }}
+          className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-6 tracking-tight"
+          style={{ color: isDark ? "#ff6b47" : "#f26a49" }}
         >
           Overview
         </h2>
         <p
           className="text-lg md:text-xl leading-relaxed font-light"
-          style={{ color: isDark ? "#e5e7eb" : "#374151" }}
+          style={{ color: isDark ? "#f9f8f8" : "#374151" }}
         >
-          I am a Full-Stack Developer currently working with HCLTech, with over
+          Full-Stack Developer currently working with HCLTech, with over
           4 years of professional experience. I have worked across a broad range
           of tech stacks, including HTML, CSS, JavaScript, React, Node.js, and
           its frameworks such as Next.js and Express.js, along with this I have
           also experience in AWS Cloud. I would also like to mention that I am
-          AWS Certified Cloud Practitioner.
+          AWS Certified Cloud Practitioner and experienced in LLM integrations.
           <br />
           <br />
           I have been actively involved in building and maintaining scalable,
@@ -198,7 +198,7 @@ export default function Home({ searchText, setMatchCount }) {
           architecture. Recognized for strong problem-solving abilities,
           adaptability in fast-paced environments and a proven track record in
           delivering scalable web applications with AI-driven feature
-          integration and driving project success.
+          integration and driving overall project success.
           <br />
           <br />
           Proficient in building RESTful APIs, handling routing, writing
@@ -226,7 +226,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fb923c" : "#ea580c" }}
+          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
         >
           Skills
         </h2>
@@ -287,7 +287,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fb923c" : "#ea580c" }}
+          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
         >
           Projects
         </h2>
@@ -345,7 +345,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fb923c" : "#ea580c" }}
+          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
         >
           Experience
         </h2>
@@ -446,7 +446,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fb923c" : "#ea580c" }}
+          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
         >
           Contact
         </h2>
