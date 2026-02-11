@@ -15,7 +15,7 @@ export default function Footer({ searchText, setMatchCount }) {
       style={{
         background: isDark 
           ? 'linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(51, 51, 51, 0.9))' 
-          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9))',
+          : 'rgba(243, 243, 243, 0.43)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
         color: isDark ? '#ffffff' : '#000000'

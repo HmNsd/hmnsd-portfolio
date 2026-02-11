@@ -177,7 +177,7 @@ export default function Home({ searchText, setMatchCount }) {
         </p>
         <h2
           className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-6 tracking-tight"
-          style={{ color: isDark ? "#ff6b47" : "#f26a49" }}
+          style={{ color: isDark ? "#58A8FC" : "#3898FF" }}
         >
           Overview
         </h2>
@@ -186,7 +186,7 @@ export default function Home({ searchText, setMatchCount }) {
           style={{ color: isDark ? "#f9f8f8" : "#374151" }}
         >
           Full-Stack Developer currently working with HCLTech, with over
-          4 years of professional experience. I have worked across a broad range
+          4+ years of professional experience. I have worked across a broad range
           of tech stacks, including HTML, CSS, JavaScript, React, Node.js, and
           its frameworks such as Next.js and Express.js, along with this I have
           also experience in AWS Cloud. I would also like to mention that I am
@@ -226,7 +226,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
+          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
         >
           Skills
         </h2>
@@ -253,8 +253,7 @@ export default function Home({ searchText, setMatchCount }) {
             "MongoDB",
             "PostgreSQL",
             "AWS",
-            "GitHub",
-            "Figma (Basics)",
+            "GitHub"
           ].map((skill, i) => (
             <span
               key={i}
@@ -262,10 +261,10 @@ export default function Home({ searchText, setMatchCount }) {
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.1)"
-                  : "rgba(0, 0, 0, 0.1)",
+                  : "rgba(241, 241, 241, 0.43)",
                 color: isDark ? "#ffffff" : "#000000",
                 border: `1px solid ${
-                  isDark ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"
+                  isDark ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)"
                 }`,
                 backdropFilter: "blur(5px)",
               }}
@@ -287,7 +286,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
+          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
         >
           Projects
         </h2>
@@ -320,7 +319,7 @@ export default function Home({ searchText, setMatchCount }) {
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.05)"
-                  : "rgba(0, 0, 0, 0.05)",
+                  : "rgba(241, 241, 241, 0.43)",
                 border: `1px solid ${
                   isDark ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"
                 }`,
@@ -345,7 +344,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
+          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
         >
           Experience
         </h2>
@@ -355,19 +354,19 @@ export default function Home({ searchText, setMatchCount }) {
               role: "Senior Software Engineer",
               location: " - HCLTech, Lucknow",
               duration: "Oct_2024 - Present |",
-              title: "| Building scalable enterprise apps",
+              title: "| Full Stack Development & LLM Integrations",
               description: [
-                "Analyze and improve the performance of web applications through techniques such as lazy loading, code splitting, image optimization, and caching strategies.",
-                "Collaborate with backend developers to integrate REST APIs, handle data binding, and ensure optimal data flow and state management using Hooks and Redux.",
-                "Engineered and maintained reusable UI components and implementing modular architecture, component-driven development with scalable design patterns.",
-                "Delivered training sessions to developers, boosting team performance and confidence in project execution.",
+                "Led end-to-end performance improvements reducing LCP by ~65% by implementing SSR, code splitting, dependency cleanup, memoization, lazy loading, and CDN-based asset optimization.",
+                "Engineered and maintained 30+ reusable TypeScript UI components, enabling modular architecture and reducing feature development time by 25–40%.",
+                "Strengthened application reliability by implementing structured error handling, logging, and type-safe patterns with TypeScript, reducing runtime bugs by 30%",
+                "Delivered technical training and mentorship sessions to 5–10+ developers, improving delivery speed, code quality, and team confidence in project execution.",
               ],
             },
             {
               role: "Software Engineer",
               location: " - HCLTech, Chennai",
               duration: "Mar_2022 - Sep_2024 |",
-              title: "| Focused on frontend using React",
+              title: "| Backend Development",
               description: [
                 "Implemented efficient optimization techniques to enhance page performance and reduce re-renders by 40%.",
                 "Identified gaps and opportunities for process improvements that bring business value and reduce high priority incident count.",
@@ -379,7 +378,7 @@ export default function Home({ searchText, setMatchCount }) {
               role: "Graduate Engineer",
               location: " - HCLTech, Noida",
               duration: "Sep_2021 - Feb_2022 |",
-              title: "| Full Stack Development",
+              title: "| Frontend Development",
               description: [
                 "Managed a team of 7 members and developed an internal HR portal for Employee Management System (EMS) as a capstone project that helps recruiters keep track of applicants.",
                 "Collaborated closely with other developers during all stages of the software development life cycle.",
@@ -393,7 +392,7 @@ export default function Home({ searchText, setMatchCount }) {
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.05)"
-                  : "rgba(0, 0, 0, 0.05)",
+                  : "rgba(241, 241, 241, 0.43)",
                 border: `1px solid ${
                   isDark ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"
                 }`,
@@ -446,7 +445,7 @@ export default function Home({ searchText, setMatchCount }) {
       >
         <h2
           className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#fd5b33" : "#ea5936" }}
+          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
         >
           Contact
         </h2>

@@ -88,7 +88,7 @@ export default function Navbar({ onSearch, matchCount }) {
         style={{
           background: isDark
             ? "rgba(0, 0, 0, 0.4)"
-            : "linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(248, 249, 250, 0.6))",
+            : "rgba(232, 232, 232, 0.43)",
           backdropFilter: "blur(5px)",
           WebkitBackdropFilter: "blur(15px)",
           border: `1px solid ${
