@@ -20,7 +20,6 @@ export default function Home({ searchText, setMatchCount }) {
 
   useHighlight(searchText, contentRef, setMatchCount);
 
-
   useEffect(() => {
     // GSAP animations for skills
     gsap.fromTo(
@@ -93,7 +92,7 @@ export default function Home({ searchText, setMatchCount }) {
   }, []);
 
   return (
-    <div  ref={contentRef}>
+    <div ref={contentRef}>
       <motion.section
         id="Home"
         className="h-full flex flex-col justify-center items-center text-center px-6 py-8 sm:py-12"
@@ -185,8 +184,8 @@ export default function Home({ searchText, setMatchCount }) {
           className="text-lg md:text-xl leading-relaxed font-light"
           style={{ color: isDark ? "#f9f8f8" : "#374151" }}
         >
-          Full-Stack Developer currently working with HCLTech, with over
-          4+ years of professional experience. I have worked across a broad range
+          Full-Stack Developer currently working with HCLTech, with over 4+
+          years of professional experience. I have worked across a broad range
           of tech stacks, including HTML, CSS, JavaScript, React, Node.js, and
           its frameworks such as Next.js and Express.js, along with this I have
           also experience in AWS Cloud. I would also like to mention that I am
@@ -239,21 +238,21 @@ export default function Home({ searchText, setMatchCount }) {
             "JavaScript (ES6+)",
             "TypeScript",
             "React",
-            "Next.js",
+            "NextJS",
             "Tailwind CSS",
             "shadcn/ui",
             "Redux Toolkit",
             "Context API",
             "GSAP",
             "Framer Motion",
-            "Node.js",
-            "Express.js",
+            "NodeJS",
+            "Express",
             "REST APIs",
             "Bcrypt & JWT",
             "MongoDB",
             "PostgreSQL",
             "AWS",
-            "GitHub"
+            "GitHub",
           ].map((skill, i) => (
             <span
               key={i}
@@ -297,16 +296,16 @@ export default function Home({ searchText, setMatchCount }) {
               desc: "HTML | CSS | TypeScript | SpringBoot | Angular",
             },
             {
-              title: "Auth NextJS App",
-              desc: "TypeScript | NextJS | Tailwind | Bcrypt | JWT | NodeMailer",
-            },
-            {
-              title: "Portfolio",
-              desc: "React | Tailwind | GSAP | UI-Designed",
+              title: "Spendledger-Backend",
+              desc: "TypeScript | Express | NodeJS | PostgreSQL | NeonDB | Drizzle ORM ",
             },
             {
               title: "Password Shield Web App",
               desc: "React | Tailwind | React Hooks | HTML & CSS",
+            },
+            {
+              title: "Auth NextJS App",
+              desc: "TypeScript | NextJS | Tailwind | MongoDB | JWT | Bcrypt",
             },
             {
               title: "E-Commerce Web App",
@@ -453,7 +452,7 @@ export default function Home({ searchText, setMatchCount }) {
           className="text-xl mb-6 font-light leading-relaxed"
           style={{ color: isDark ? "#e5e7eb" : "#374151" }}
         >
-        To connect and get in touch for collaborations.
+          To connect and get in touch for collaborations.
         </p>
         <div className="flex space-x-4">
           <motion.a
