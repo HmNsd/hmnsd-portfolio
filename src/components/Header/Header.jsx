@@ -82,8 +82,8 @@ export default function Navbar({ onSearch, matchCount }) {
         className={`
      z-50 rounded-2xl shadow-md mx-auto transition-all duration-300
     w-full
-    lg:${isScrolled ? "w-11/12 sticky top-2" : "w-full sticky top-0"}
-    md:${isScrolled ? "w-11/12 sticky top-2" : "w-full sticky top-0"}
+    lg:${isScrolled ? "w-11/12 sticky top-0" : "w-full sticky top-0"}
+    md:${isScrolled ? "w-11/12 sticky top-0" : "w-full sticky top-0"}
   `}
         style={{
           background: isDark
@@ -100,6 +100,7 @@ export default function Navbar({ onSearch, matchCount }) {
           {/* Logo */}
           <a
             href="#Home"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-2xl font-bold hover:text-orange-500"
             style={{ color: isDark ? "#ffffff" : "#000000" }}
           >
