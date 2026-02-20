@@ -44,7 +44,7 @@ export default function Home({ searchText, setMatchCount }) {
   const Info = ({ icon: Icon, children }) => {
     return (
       <div
-        className="flex items-center gap-3"
+        className="flex items-center gap-3 no-underline"
         style={{ color: isDark ? "#d1d5db" : "#374151" }}
       >
         <Icon size={16} style={{ color: isDark ? "#9ca3af" : "#6b7280" }} />
@@ -456,8 +456,8 @@ export default function Home({ searchText, setMatchCount }) {
             {
               role: "Senior Software Engineer",
               location: " - HCLTech, Lucknow",
-              duration: "Oct_2024 - Present |",
-              title: "| Full Stack Development & LLM Integrations",
+              duration: "Oct-2024 - Present",
+              title: "Full Stack Developer",
               description: [
                 "Led end-to-end performance improvements reducing LCP by ~65% by implementing SSR, code splitting, dependency cleanup, memoization, lazy loading, and CDN-based asset optimization.",
                 "Engineered and maintained 30+ reusable TypeScript UI components, enabling modular architecture and reducing feature development time by 25–40%.",
@@ -468,8 +468,8 @@ export default function Home({ searchText, setMatchCount }) {
             {
               role: "Software Engineer",
               location: " - HCLTech, Chennai",
-              duration: "Mar_2022 - Sep_2024 |",
-              title: "| Backend Development",
+              duration: "Mar-2022 - Sep-2024",
+              title: "Backend Developer",
               description: [
                 "Implemented efficient optimization techniques to enhance page performance and reduce re-renders by 40%.",
                 "Identified gaps and opportunities for process improvements that bring business value and reduce high priority incident count.",
@@ -480,8 +480,8 @@ export default function Home({ searchText, setMatchCount }) {
             {
               role: "Graduate Engineer",
               location: " - HCLTech, Noida",
-              duration: "Sep_2021 - Feb_2022 |",
-              title: "| Frontend Development",
+              duration: "Sep-2021 - Feb-2022",
+              title: "Frontend Developer",
               description: [
                 "Managed a team of 7 members and developed an internal HR portal for Employee Management System (EMS) as a capstone project that helps recruiters keep track of applicants.",
                 "Collaborated closely with other developers during all stages of the software development life cycle.",
@@ -502,19 +502,20 @@ export default function Home({ searchText, setMatchCount }) {
                 backdropFilter: "blur(5px)",
               }}
             >
-              <h3 className="text-xl md:text-2xl inline font-bold">
+              <h3 className="text-l md:text-2xl inline font-bold">
                 {exp.role}
               </h3>
-              <span className="inline text-sm md:text-base font-medium ml-2">
+              <span className="inline text-sm md:text-base font-light">
                 {exp.location}
               </span>
-              <div className="flex text-xs md:text-lg">
+              <div className="flex justify-between w-full  text-s md:text-lg ">
+                <p className="font-semi-bold">
+                  {exp.title}
+                </p>
                 <p style={{ color: isDark ? "#d1d5db" : "#6b7280" }}>
                   {exp.duration}
                 </p>
-                <p style={{ color: isDark ? "#d1d5db" : "#6b7280" }}>
-                  {exp.title}
-                </p>
+            
               </div>
               <hr
                 className="my-2 sm:mx-auto lg:my-2"
