@@ -5,7 +5,6 @@ export function useHighlight(searchText, ref, setMatchCount) {
     const root = ref.current;
     if (!root) return;
 
-    // 1️⃣ Remove previous highlights
     root.querySelectorAll("mark").forEach((el) => {
       el.replaceWith(document.createTextNode(el.textContent));
     });
@@ -15,11 +14,9 @@ export function useHighlight(searchText, ref, setMatchCount) {
       return;
     }
 
-    // 2️⃣ Escape regex special chars
     const escaped = searchText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const regex = new RegExp(escaped, "gi");
 
-    // 3️⃣ Collect all text nodes first
     const walker = document.createTreeWalker(
       root,
       NodeFilter.SHOW_TEXT,
@@ -37,7 +34,6 @@ export function useHighlight(searchText, ref, setMatchCount) {
 
     let totalMatches = 0;
 
-    // 4️⃣ Process nodes and highlight matches
     textNodes.forEach((textNode) => {
       const text = textNode.nodeValue;
       let lastIndex = 0;
@@ -45,14 +41,11 @@ export function useHighlight(searchText, ref, setMatchCount) {
 
       regex.lastIndex = 0;
 
-      // Use replace callback to find all matches
       text.replace(regex, (match, index) => {
-        totalMatches++; // ✅ increment for every match
+        totalMatches++;
 
-        // Text before match
         fragment.appendChild(document.createTextNode(text.slice(lastIndex, index)));
 
-        // Highlighted match
         const mark = document.createElement("mark");
         mark.textContent = match;
         fragment.appendChild(mark);
@@ -61,15 +54,12 @@ export function useHighlight(searchText, ref, setMatchCount) {
         return match;
       });
 
-      // Remaining text after last match
       fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
 
       textNode.parentNode.replaceChild(fragment, textNode);
     });
 
-    // 5️⃣ Update state after all highlights applied
     if (typeof setMatchCount === "function") {
-        console.log("Matches found:", totalMatches)
       setMatchCount(totalMatches);
     }
 

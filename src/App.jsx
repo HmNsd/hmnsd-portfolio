@@ -1,10 +1,9 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Pages/Home";
 import Footer from "./components/Footer/Footer";
 import { useTheme } from "./context/ThemeContext";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 function App() {
   const { isDark } = useTheme();
@@ -35,7 +34,7 @@ function App() {
           <Route path="/hmnsd-portfolio/skills" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/projects" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/experience" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
-          <Route path="/hmnsd-portfolio/contact" element={<Home searchText={searchText}/>} />
+          <Route path="/hmnsd-portfolio/contact" element={<Home searchText={searchText} setMatchCount={setMatchCount}/>} />
         </Routes>
       </main>
       <Footer searchText={searchText} />

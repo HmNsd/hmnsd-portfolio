@@ -11,21 +11,12 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import profile from "../../assets/profile.png";
 
 import { useHighlight } from "../../context/Search";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Home({ searchText, setMatchCount }) {
   const { isDark } = useTheme();
-  const headerRef = useRef(null);
-  const infoGridRef = useRef(null);
-  const skillsRef = useRef(null);
-  const projectsRef = useRef(null);
-  const experienceRef = useRef(null);
 
   const contentRef = useRef(null);
 
@@ -34,8 +25,8 @@ export default function Home({ searchText, setMatchCount }) {
 
     const utterance = new SpeechSynthesisUtterance("Himanshu Nishad");
     utterance.lang = "en-IN";
-    utterance.rate = 1.5;
-    utterance.pitch = 0.8;
+    utterance.rate = 1;
+    utterance.pitch = 1;
 
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(utterance);
@@ -99,86 +90,6 @@ export default function Home({ searchText, setMatchCount }) {
 
   useHighlight(searchText, contentRef, setMatchCount);
 
-  useEffect(() => {
-    // GSAP animation for header text
-    gsap.fromTo(
-      headerRef.current?.children,
-      { x: -50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.6, stagger: 0.2, ease: "power2.out" }
-    );
-
-    // GSAP animation for info grid
-    gsap.fromTo(
-      infoGridRef.current?.children,
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        stagger: 0.1,
-        delay: 0.6,
-        ease: "power2.out",
-      }
-    );
-
-    // GSAP animations for skills
-    gsap.fromTo(
-      skillsRef.current?.children,
-      { opacity: 0, y: 30, scale: 0.8 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.4,
-        stagger: 0.05,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: skillsRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    // GSAP animations for projects
-    gsap.fromTo(
-      projectsRef.current?.children,
-      { opacity: 0, x: -50, rotateY: -15 },
-      {
-        opacity: 1,
-        x: 0,
-        rotateY: 0,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: projectsRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    // GSAP animations for experience
-    gsap.fromTo(
-      experienceRef.current?.children,
-      { opacity: 0, y: 50, scale: 0.9 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.4,
-        stagger: 0.08,
-        ease: "elastic.out(1, 0.8)",
-        scrollTrigger: {
-          trigger: experienceRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  }, []);
-
   return (
     <div ref={contentRef}>
       <div className="flex flex-col justify-center items-center px-4 md:px-6 pt-10 w-full">
@@ -200,7 +111,7 @@ export default function Home({ searchText, setMatchCount }) {
             />
           </div>
 
-          <div ref={headerRef} className="text-start w-full mb-1 md:mb-2">
+          <div className="text-start w-full mb-1 md:mb-2">
             <div className="flex sm:flex-row items-start justify-start gap-2 text-2xl sm:text-4xl md:text-5xl">
               <h1 className=" font-bold md:mb-5 mb-2 tracking-tight bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
                 Himanshu Nishad
@@ -233,7 +144,7 @@ export default function Home({ searchText, setMatchCount }) {
             </div>
           </div>
         </div>
-        <div ref={infoGridRef} className="grid md:gap-5 gap-4 w-full mb-4">
+        <div className="grid md:gap-5 gap-4 w-full mb-4">
           <div className="grid md:gap-5 gap-4 w-full ">
             <Info icon={Code}>
               Senior Software Engineer @<b>HCLTech</b>
@@ -242,60 +153,42 @@ export default function Home({ searchText, setMatchCount }) {
               Founder @<b>BrewnCode</b>
             </Info>
           </div>
-          <div className="grid lg:grid-cols-12 
-                gap-4 sm:gap-6 md:gap-5 w-full mb-10">
+          <div
+            className="grid lg:grid-cols-12 
+                gap-4 sm:gap-6 md:gap-5 w-full mb-10"
+          >
+            <div className="grid gap-4 sm:gap-5 lg:col-span-4">
+              <Info icon={Mail}>himanshunishadofficial@gmail.com</Info>
+              <Info icon={Phone}>+91 9519779338</Info>
+            </div>
 
-  <div className="grid gap-4 sm:gap-5 lg:col-span-4">
-    <Info icon={Mail}>himanshunishadofficial@gmail.com</Info>
-    <Info icon={Phone}>+91 9519779338</Info>
-  </div>
-
-  <div className="grid gap-4 sm:gap-5 lg:col-span-8">
-    <Info icon={MapPin}>New Delhi, India</Info>
-    <Info icon={Clock5}>
-      {time}
-      <span className="ml-2 text-sm opacity-70">
-        {difference}
-      </span>
-    </Info>
-  </div>
-
-</div>
-
+            <div className="grid gap-4 sm:gap-5 lg:col-span-8">
+              <Info icon={MapPin}>New Delhi, India</Info>
+              <Info icon={Clock5}>
+                {time}
+                <span className="ml-2 text-sm opacity-70">{difference}</span>
+              </Info>
+            </div>
+          </div>
         </div>
       </div>
 
-      <motion.section
-        id="about"
-        className="py-2 sm:py-5 px-6 container mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        <p
-          className="font-semibold text-sm sm:text-base leading-relaxed uppercase tracking-widest mb-2"
-          style={{ color: isDark ? "#ada9a8" : "#545352" }}
-        >
-          Introduction
-        </p>
+      <section id="about" className="py-2 sm:py-5 px-6 container mx-auto">
         <h2
-          className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 tracking-tight"
-          style={{ color: isDark ? "#58A8FC" : "#3898FF" }}
+          className="text-3xl md:text-4xl font-light mb-8 tracking-tight"
+          style={{ color: isDark ? "#67acfa" : "#2879d3" }}
         >
-          Overview
+          Professional Summary
         </h2>
         <p
           className="text-lg md:text-xl leading-relaxed font-light"
           style={{ color: isDark ? "#f9f8f8" : "#374151" }}
         >
-          Full-Stack Developer currently working with HCLTech, with over 4+
-          years of professional experience. I have worked across a broad range
-          of tech stacks, including HTML, CSS, JavaScript, React, Node.js, and
-          its frameworks such as Next.js and Express.js, along with this I have
-          also experience in AWS Cloud. I would also like to mention that I am
-          AWS Certified Cloud Practitioner and experienced in LLM integrations.
-          <br />
-          <br />
+          I’m a Senior Full-Stack Software Engineer at HCLTech with 4+ years of
+          experience designing and building scalable, high-performance web
+          applications. Proficient in React, Node.js and Next.js with a strong
+          foundation in core web technologies. AWS Certified Cloud Practitioner
+          with hands-on experience in cloud infrastructure and LLM integrations.
           I have been actively involved in building and maintaining scalable,
           production-grade web applications, with a deep understanding of web
           architecture. Recognized for strong problem-solving abilities,
@@ -309,34 +202,21 @@ export default function Home({ searchText, setMatchCount }) {
           authentication systems. I have also worked with both SQL and NoSQL
           databases, including data modeling and query optimization. Adept at
           optimizing components for performance, speed, and scalability across
-          devices and browsers.
-          <br />
-          <br />
-          Passionate about continuous learning, staying up to date with the
-          latest frontend trends, and fostering effective collaboration through
-          strong communication and interpersonal skills.
+          devices and browsers. Passionate about continuous learning and
+          fostering effective collaboration through strong communication and
+          interpersonal skills.
         </p>
-      </motion.section>
+      </section>
 
       {/* Skills Section */}
-      <motion.section
-        id="skills"
-        className="py-6 md:py-10 md:px-6 container mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
+      <section id="skills" className="py-6 md:py-10 md:px-6 container mx-auto">
         <h2
-          className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
+          className="text-3xl md:text-4xl font-light mb-8 tracking-tight"
+          style={{ color: isDark ? "#67acfa" : "#2879d3" }}
         >
           Skills
         </h2>
-        <div
-          ref={skillsRef}
-          className="flex flex-wrap md:gap-4 gap-2 justify-start"
-        >
+        <div className="flex flex-wrap md:gap-4 gap-2 justify-start">
           {[
             "HTML5 & CSS3",
             "JavaScript (ES6+)",
@@ -360,7 +240,7 @@ export default function Home({ searchText, setMatchCount }) {
           ].map((skill, i) => (
             <span
               key={i}
-              className="px-4 py-3 font-bold text-sm rounded-lg shadow hover:scale-105 transition-transform cursor-pointer tracking-wide"
+              className="px-4 py-3 font-bold text-sm rounded-lg shadow transition-transform cursor-pointer tracking-wide"
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.1)"
@@ -376,24 +256,20 @@ export default function Home({ searchText, setMatchCount }) {
             </span>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Projects Section */}
-      <motion.section
+      <section
         id="projects"
         className="py-6 md:py-10 md:px-6 container mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
       >
         <h2
-          className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
+          className="text-3xl md:text-4xl font-light mb-8 tracking-tight"
+          style={{ color: isDark ? "#67acfa" : "#2879d3" }}
         >
           Projects
         </h2>
-        <div ref={projectsRef} className="grid md:grid-cols-2 md:gap-4 gap-2">
+        <div className="grid md:grid-cols-2 md:gap-4 gap-2">
           {[
             {
               title: "Employee Management System",
@@ -418,7 +294,7 @@ export default function Home({ searchText, setMatchCount }) {
           ].map((p, i) => (
             <div
               key={i}
-              className="md:p-4 p-3 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
+              className="md:p-4 p-3 rounded-lg shadow hover:shadow-lg transition-all cursor-pointer"
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.05)"
@@ -429,29 +305,25 @@ export default function Home({ searchText, setMatchCount }) {
                 backdropFilter: "blur(5px)",
               }}
             >
-              <h3 className="text-lg md:text-xl font-bold mb-2">{p.title}</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-2" style={{ color: isDark ? "#f1f1f1" : "#464646" }}>{p.title}</h3>
               <p style={{ color: isDark ? "#d1d5db" : "#6b7280" }}>{p.desc}</p>
             </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Experience Section */}
-      <motion.section
+      <section
         id="experience"
         className="py-6 md:py-10 md:px-6 container mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
       >
         <h2
-          className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
+          className="text-3xl md:text-4xl font-light mb-8 tracking-tight"
+          style={{ color: isDark ? "#67acfa" : "#2879d3" }}
         >
           Experience
         </h2>
-        <div ref={experienceRef} className="space-y-4">
+        <div className="space-y-4">
           {[
             {
               role: "Senior Software Engineer",
@@ -491,7 +363,7 @@ export default function Home({ searchText, setMatchCount }) {
           ].map((exp, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all"
+              className="p-4 rounded-lg shadow hover:shadow-lg transition-all"
               style={{
                 backgroundColor: isDark
                   ? "rgba(255, 255, 255, 0.05)"
@@ -502,20 +374,17 @@ export default function Home({ searchText, setMatchCount }) {
                 backdropFilter: "blur(5px)",
               }}
             >
-              <h3 className="text-l md:text-2xl inline font-bold">
+              <h3 className="text-l md:text-2xl inline font-semibold">
                 {exp.role}
               </h3>
               <span className="inline text-sm md:text-base font-light">
                 {exp.location}
               </span>
               <div className="flex justify-between w-full  text-s md:text-lg ">
-                <p className="font-semi-bold">
-                  {exp.title}
-                </p>
+                <p className="font-semi-bold" style={{ color: isDark ? "#f1f1f1" : "#464646" }}>{exp.title}</p>
                 <p style={{ color: isDark ? "#d1d5db" : "#6b7280" }}>
                   {exp.duration}
                 </p>
-            
               </div>
               <hr
                 className="my-2 sm:mx-auto lg:my-2"
@@ -536,7 +405,7 @@ export default function Home({ searchText, setMatchCount }) {
             </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* Contact Section */}
       <motion.section
@@ -548,8 +417,8 @@ export default function Home({ searchText, setMatchCount }) {
         viewport={{ once: true }}
       >
         <h2
-          className="text-3xl md:text-4xl font-bold mb-8 tracking-tight"
-          style={{ color: isDark ? "#ff9100" : "#ea5936" }}
+          className="text-3xl md:text-4xl font-light mb-8 tracking-tight"
+          style={{ color: isDark ? "#67acfa" : "#2879d3" }}
         >
           Contact
         </h2>
