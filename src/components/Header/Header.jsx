@@ -6,6 +6,7 @@ import {
   SunIcon,
   MoonIcon,
 } from "@heroicons/react/24/outline";
+import { Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import LoginModal from "../LoginModal";
@@ -252,6 +253,24 @@ export default function Navbar({ onSearch, matchCount }) {
               ) : (
                 <MoonIcon className="w-6 h-6" style={{ color: "#000000" }} />
               )}
+            </button>
+            <button
+              onClick={() => {
+                window.dispatchEvent(new Event("open-agent-sandbox"));
+                setIsOpen(false);
+                setShowSearch(false);
+              }}
+              className="p-2 rounded-2xl transition-colors"
+              style={{
+                border: "1px solid rgba(234, 88, 12, 0.9)",
+                background: "linear-gradient(135deg, #f97316, #ea580c)",
+              }}
+              aria-label="Open interactive agent sandbox"
+            >
+              <Bot
+                className="w-6 h-6"
+                style={{ color: "#ffffff" }}
+              />
             </button>
             {/* Search Icon */}
             <button onClick={() => setShowSearch(!showSearch)}>

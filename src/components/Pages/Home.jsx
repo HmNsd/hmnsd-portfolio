@@ -12,6 +12,7 @@ import {
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 import profile from "../../assets/profile.png";
+import AgentSandbox from "../AgentSandbox";
 
 import { useHighlight } from "../../context/Search";
 
@@ -139,7 +140,7 @@ export default function Home({ searchText, setMatchCount }) {
                 className="text-sm sm:text-base md:text-lg font-medium"
                 style={{ color: isDark ? "#d1d5db" : "#6b7280" }}
               >
-                Full-Stack Developer
+                Full-Stack & Agentic AI
               </p>
             </div>
           </div>
@@ -184,27 +185,12 @@ export default function Home({ searchText, setMatchCount }) {
           className="text-lg md:text-xl leading-relaxed font-light"
           style={{ color: isDark ? "#f9f8f8" : "#374151" }}
         >
-          I’m a Senior Full-Stack Software Engineer at HCLTech with 4+ years of
-          experience designing and building scalable, high-performance web
-          applications. Proficient in React, Node.js and Next.js with a strong
-          foundation in core web technologies. AWS Certified Cloud Practitioner
-          with hands-on experience in cloud infrastructure and LLM integrations.
-          I have been actively involved in building and maintaining scalable,
-          production-grade web applications, with a deep understanding of web
-          architecture. Recognized for strong problem-solving abilities,
-          adaptability in fast-paced environments and a proven track record in
-          delivering scalable web applications with AI-driven feature
-          integration and driving overall project success.
+          I’m a Senior Software Engineer at HCLTech with 4+ years of experience architecting and delivering scalable, production-grade web applications and cloud-native platforms. Specialized in building high performance full-stack systems using React, Next.js, and Node.js, with deep expertise in modern web architecture, backend engineering, and distributed system design. Being a Certified AWS Cloud Practitioner, I have hands-on experience designing secure authentication systems, developing custom middleware infrastructure, building high-throughput RESTful APIs, and optimizing application performance across diverse environments. Strong foundation in both SQL and NoSQL databases, including data modeling, query optimization, and scalable backend design for enterprise applications.
           <br />
           <br />
-          Proficient in building RESTful APIs, handling routing, writing
-          middlewares and helper functions and developed end-to-end user
-          authentication systems. I have also worked with both SQL and NoSQL
-          databases, including data modeling and query optimization. Adept at
-          optimizing components for performance, speed, and scalability across
-          devices and browsers. Passionate about continuous learning and
-          fostering effective collaboration through strong communication and
-          interpersonal skills.
+          More recently, I have been focused on AI-driven engineering and intelligent automation, architecting autonomous multi-agent orchestration systems using AWS Bedrock and Claude 3.5 Sonnet. With a strong foundation in full-stack development and scalable system design, With a focus on code quality, system reliability, UI optimization, cross-platform compatibility, and maintainability. Recognized for strong ownership, analytical problem-solving abilities, and adaptability in fast-paced environments, I excel at driving complex initiatives from concept to deployment while collaborating effectively across cross-functional teams. I bring a results-oriented engineering mindset, strong technical leadership, and a commitment to continuous innovation to build impactful, business-critical AI systems and agentic solutions that deliver value to clients and contribute to overall organizational success.
+
+
         </p>
       </section>
 
@@ -237,6 +223,7 @@ export default function Home({ searchText, setMatchCount }) {
             "PostgreSQL",
             "AWS",
             "GitHub",
+            "Agentic AI"
           ].map((skill, i) => (
             <span
               key={i}
@@ -406,6 +393,8 @@ export default function Home({ searchText, setMatchCount }) {
           ))}
         </div>
       </section>
+
+      <AgentSandbox />
 
       {/* Contact Section */}
       <motion.section
