@@ -30,11 +30,13 @@ function App() {
       <Header onSearch={setSearchText} matchCount={matchCount} />
       <main className="flex-grow container mx-auto mt-5 px-4">
         <Routes>
+          <Route path="/" element={<Home searchText={searchText} setMatchCount={setMatchCount} />} />
           <Route path="/hmnsd-portfolio" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/skills" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/projects" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/experience" element={<Home searchText={searchText}  setMatchCount={setMatchCount}/>} />
           <Route path="/hmnsd-portfolio/contact" element={<Home searchText={searchText} setMatchCount={setMatchCount}/>} />
+          <Route path="*" element={<Home searchText={searchText} setMatchCount={setMatchCount} />} />
         </Routes>
       </main>
       <Footer searchText={searchText} />
