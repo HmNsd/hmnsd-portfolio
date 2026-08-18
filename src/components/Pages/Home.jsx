@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/profile.jpeg";
 import AgentSandbox from "../AgentSandbox";
 
 import { useHighlight } from "../../context/Search";
